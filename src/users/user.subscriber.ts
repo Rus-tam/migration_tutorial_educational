@@ -3,8 +3,8 @@ import { User } from "./entities/user.entity";
 import { Logger } from "@nestjs/common";
 
 @EventSubscriber()
-export class UserSubscriber implements EntitySubscriberInterface<User> {
-    private readonly logger = new Logger(UserSubscriber.name);
+export class UsersSubscriber implements EntitySubscriberInterface<User> {
+    private readonly logger = new Logger(UsersSubscriber.name);
 
     constructor(dataSource: DataSource) {
         dataSource.subscribers.push(this);
